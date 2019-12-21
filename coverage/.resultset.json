@@ -1,0 +1,25 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/app.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/lib/user.rb": [
+
+      ]
+    },
+    "timestamp": 1576953229
+  }
+}
