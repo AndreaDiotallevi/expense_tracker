@@ -19,10 +19,15 @@ class ExpenseTracker < Sinatra::Base
   end
   
   post "/users" do
-    user = User.create(first_name: params[:"first-name"], surname: params[:"surname"],
-                       email: params[:"email"], password: params[:"password"])
-    session[:user_id] = user.id
-    redirect "/themes"
+    if params[:"password"] == params[:"confirm-password"]
+      user = User.create(first_name: params[:"first-name"], surname: params[:"surname"],
+                        email: params[:"email"], password: params[:"password"])
+      session[:user_id] = user.id
+      redirect "/themes"
+    else
+      flash[:notice] = "Please enter two matching passwords"
+      redirect "/users/new"
+    end
   end
 
   get "/sessions/new" do
