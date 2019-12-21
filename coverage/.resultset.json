@@ -13,13 +13,26 @@
         1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ],
       "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/lib/user.rb": [
-
+        1,
+        null
+      ],
+      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/homepage_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1576953229
+    "timestamp": 1576953676
   }
 }
