@@ -1,10 +1,12 @@
 require "sinatra/base"
 require "sinatra/activerecord"
+require "sinatra/flash"
 
 require "./lib/user"
 
 class ExpenseTracker < Sinatra::Base
   register Sinatra::ActiveRecordExtension
+  register Sinatra::Flash
   set :database_file, "config/database.yml"
   enable :sessions
 
@@ -31,6 +33,12 @@ class ExpenseTracker < Sinatra::Base
     user = User.where(email: params[:"email"], password: params[:"password"]).first
     session[:user_id] = user.id
     redirect "/themes"
+  end
+
+  post "/sessions/destroy" do
+    session.clear
+    flash[:notice] = 'You have logged out'
+    redirect "/"
   end
 
   get "/themes" do
