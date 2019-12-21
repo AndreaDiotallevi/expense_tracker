@@ -1,23 +1,25 @@
-ENV['RACK_ENV'] = 'test'
-ENV['ENVIRONMENT'] = 'test'
+ENV["RACK_ENV"] = "test"
+ENV["ENVIRONMENT"] = "test"
 
-require 'simplecov'
-require 'simplecov-console'
+require "simplecov"
+require "simplecov-console"
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::Console])
 SimpleCov.start
 
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
-require 'sinatra/activerecord'
-require_relative '../app'
+require "capybara"
+require "capybara/rspec"
+require "rspec"
+require "sinatra/activerecord"
+
+require_relative "../app"
+require_relative "./web_helpers"
 
 Capybara.app = ExpenseTracker
 
 RSpec.configure do |config|
   config.before(:each) do
-    ActiveRecord::Base.connection.execute('TRUNCATE users')
+    ActiveRecord::Base.connection.execute("TRUNCATE users")
   end
 
   config.expect_with :rspec do |expectations|

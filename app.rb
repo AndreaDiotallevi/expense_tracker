@@ -9,14 +9,26 @@ class ExpenseTracker < Sinatra::Base
   enable :sessions
 
   get "/" do
-    erb :index
+    erb :"index"
+  end
+
+  get "/users/new" do
+    erb :"users/new"
   end
   
-  post "/users/new" do
-    user = User.create(first_name: params[:"first-name"],
-                       surname: params[:"surname"],
-                       email: params[:"email"],
-                       password: params[:"password"])
+  post "/users" do
+    user = User.create(first_name: params[:"first-name"], surname: params[:"surname"],
+                       email: params[:"email"], password: params[:"password"])
+    session[:user_id] = user.id
+    redirect "/themes"
+  end
+
+  get "/sessions/new" do
+    erb :"sessions/new"
+  end
+
+  post "/sessions" do
+    user = User.where(email: params[:"email"], password: params[:"password"]).first
     session[:user_id] = user.id
     redirect "/themes"
   end
