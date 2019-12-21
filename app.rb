@@ -9,7 +9,7 @@ class ExpenseTracker < Sinatra::Base
   set :database_file, "config/database.yml"
 
   get "/" do
-    "Welcome to the best expense tracker application out there!"
+    erb :index
   end
   
   run! if app_file == $0
