@@ -1,5 +1,5 @@
 feature "Log out" do
-  scenario "A user can log out" do
+  scenario "a user can log out" do
     sign_up
     click_button "Log Out"
 

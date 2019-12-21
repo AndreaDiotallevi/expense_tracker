@@ -1,11 +1,11 @@
 feature "Sign up" do
-  scenario "A user can create an account" do
+  scenario "a user can create an account" do
     sign_up
     expect(page).to have_current_path "/themes"
     expect(page).to have_content "Signed in as Andrea"
   end
 
-  scenario "A user is notified when he enters a non-matching confirmed password" do
+  scenario "a user cannot sign up if he enters a non-matching confirmed password" do
     visit "/"
     click_button "Sign Up"
     fill_in "first-name", with: "Andrea"
