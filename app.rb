@@ -1,3 +1,4 @@
+require 'bcrypt'
 require "sinatra/base"
 require "sinatra/activerecord"
 require "sinatra/flash"
@@ -20,8 +21,9 @@ class ExpenseTracker < Sinatra::Base
   
   post "/users" do
     if params[:"password"] == params[:"confirm-password"]
+      encrypted_password = BCrypt::Password.create(params[:"password"])
       user = User.create(first_name: params[:"first-name"], surname: params[:"surname"],
-                        email: params[:"email"], password: params[:"password"])
+                        email: params[:"email"], password: encrypted_password)
       session[:user_id] = user.id
       redirect "/themes"
     else
@@ -35,8 +37,8 @@ class ExpenseTracker < Sinatra::Base
   end
 
   post "/sessions" do
-    user = User.where(email: params[:"email"], password: params[:"password"]).first
-    if user
+    user = User.where(email: params[:"email"]).first
+    if user && BCrypt::Password.new(user.password) == params[:"password"]
       session[:user_id] = user.id
       redirect "/themes"
     else
