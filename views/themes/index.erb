@@ -7,11 +7,15 @@
 </form>
 
 <form action="/themes/new" method="get">
-  <input type="submit" value="Add a New Theme">
+  <input type="submit" value="Create a New Theme">
 </form>
 
 <ul>
   <% @themes.each do |theme| %>
-    <li><%= theme.title %></li>
+    <li>
+      <form action="/themes/<%= theme.id %>" method="get">
+        <input type="submit" value="<%= theme.title %>">
+      </form>
+    </li>
   <% end %>
 </ul>

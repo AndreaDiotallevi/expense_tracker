@@ -16,3 +16,10 @@ def log_in
   fill_in "password", with: "password"
   click_button "Log In"
 end
+
+def create_theme
+  click_button "Create a New Theme"
+  expect(page).to have_current_path "/themes/new"
+  fill_in "title", with: "Budapest Holiday August 2019"
+  click_button "Create Theme"
+end

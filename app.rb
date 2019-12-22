@@ -65,6 +65,11 @@ class ExpenseTracker < Sinatra::Base
     erb :"themes/new"
   end
 
+  get "/themes/:id" do
+    @theme = Theme.find(params[:id])
+    erb :"themes/show"
+  end
+
   post "/themes" do
     @user = User.find(session[:user_id])
     @user.themes.create(title: params[:"title"])
