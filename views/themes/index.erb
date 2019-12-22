@@ -5,3 +5,13 @@
 <form action="/sessions/destroy" method="post">
   <input type="submit" value="Log Out">
 </form>
+
+<form action="/themes/new" method="get">
+  <input type="submit" value="Add a New Theme">
+</form>
+
+<ul>
+  <% @themes.each do |theme| %>
+    <li><%= theme.title %></li>
+  <% end %>
+</ul>

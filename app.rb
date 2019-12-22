@@ -4,6 +4,8 @@ require "sinatra/activerecord"
 require "sinatra/flash"
 
 require "./lib/user"
+require "./lib/theme"
+require "./lib/participation"
 
 class ExpenseTracker < Sinatra::Base
   register Sinatra::ActiveRecordExtension
@@ -55,7 +57,18 @@ class ExpenseTracker < Sinatra::Base
 
   get "/themes" do
     @user = User.find(session[:user_id])
+    @themes = @user.themes
     erb :"themes/index"
+  end
+
+  get "/themes/new" do
+    erb :"themes/new"
+  end
+
+  post "/themes" do
+    @user = User.find(session[:user_id])
+    @user.themes.create(title: params[:"title"])
+    redirect "/themes"
   end
   
   run! if app_file == $0
