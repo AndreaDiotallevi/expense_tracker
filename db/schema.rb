@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_22_190045) do
+ActiveRecord::Schema.define(version: 2019_12_23_104647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expenses", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "theme_id"
+    t.decimal "amount", precision: 8, scale: 2
+    t.string "description"
+    t.index ["theme_id"], name: "index_expenses_on_theme_id"
+    t.index ["user_id"], name: "index_expenses_on_user_id"
+  end
 
   create_table "participations", force: :cascade do |t|
     t.bigint "user_id"

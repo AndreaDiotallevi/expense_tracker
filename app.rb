@@ -6,6 +6,7 @@ require "sinatra/flash"
 require "./lib/user"
 require "./lib/theme"
 require "./lib/participation"
+require "./lib/expense"
 
 class ExpenseTracker < Sinatra::Base
   register Sinatra::ActiveRecordExtension
@@ -66,6 +67,7 @@ class ExpenseTracker < Sinatra::Base
   end
 
   get "/themes/:id" do
+    @user = User.find(session[:user_id])
     @theme = Theme.find(params[:id])
     erb :"themes/show"
   end
@@ -86,6 +88,18 @@ class ExpenseTracker < Sinatra::Base
     @user = User.where(first_name: params[:"first-name"], surname: params[:"surname"]).first
     @theme = Theme.find(params[:id])
     Participation.create(user_id: @user.id, theme_id: @theme.id)
+    redirect "/themes/#{params[:id]}"
+  end
+
+  get "/themes/:id/expenses/new" do
+    @theme = Theme.find(params[:id])
+    erb :"expenses/new"
+  end
+
+  post "/themes/:id/expenses" do
+    @user = User.find(session[:user_id])
+    @theme = Theme.find(params[:id])
+    Expense.create(user_id: @user.id, theme_id: @theme.id, amount: params[:"amount"], description: params[:"description"])
     redirect "/themes/#{params[:id]}"
   end
   

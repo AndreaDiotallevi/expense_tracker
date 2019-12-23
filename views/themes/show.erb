@@ -11,3 +11,13 @@
     <li><%= user.first_name + " " + user.surname  %></li>
   </ul>
 <% end %>
+
+<form action="/themes/<%= @theme.id %>/expenses/new" method="get">
+  <input type="submit" value="Add New Expense">
+</form>
+
+<% @theme.expenses.each do |expense| %>
+  <ul>
+    <li><%= @user.first_name + " " + @user.surname + " £" + expense.amount.to_s + " " + expense.description %></li>
+  </ul>
+<% end %>
