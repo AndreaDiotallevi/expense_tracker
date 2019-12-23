@@ -72,9 +72,8 @@ class ExpenseTracker < Sinatra::Base
   end
 
   post "/themes" do
-    @user = User.find(session[:user_id])
     @theme = Theme.create(title: params[:"title"])
-    Participation.create(user_id: @user.id, theme_id: @theme.id)
+    Participation.create(user_id: session[:user_id], theme_id: @theme.id)
     redirect "/themes"
   end
 
@@ -96,9 +95,8 @@ class ExpenseTracker < Sinatra::Base
   end
 
   post "/themes/:id/expenses" do
-    @user = User.find(session[:user_id])
     @theme = Theme.find(params[:id])
-    Expense.create(user_id: @user.id, theme_id: @theme.id,
+    Expense.create(user_id: session[:user_id], theme_id: @theme.id,
                    amount: params[:"amount"], description: params[:"description"])
     redirect "/themes/#{params[:id]}"
   end
