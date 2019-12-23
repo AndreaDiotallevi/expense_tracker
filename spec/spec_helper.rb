@@ -19,7 +19,7 @@ Capybara.app = ExpenseTracker
 
 RSpec.configure do |config|
   config.before(:each) do
-    ActiveRecord::Base.connection.execute("TRUNCATE users")
+    ActiveRecord::Base.connection.execute("TRUNCATE users, themes, participations, expenses")
   end
 
   config.expect_with :rspec do |expectations|
