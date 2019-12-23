@@ -72,8 +72,21 @@ class ExpenseTracker < Sinatra::Base
 
   post "/themes" do
     @user = User.find(session[:user_id])
-    @user.themes.create(title: params[:"title"])
+    @theme = Theme.create(title: params[:"title"])
+    Participation.create(user_id: @user.id, theme_id: @theme.id)
     redirect "/themes"
+  end
+
+  get "/themes/:id/participations/new" do
+    @theme = Theme.find(params[:id])
+    erb :"participations/new"
+  end
+
+  post "/themes/:id/participations" do
+    @user = User.where(first_name: params[:"first-name"], surname: params[:"surname"]).first
+    @theme = Theme.find(params[:id])
+    Participation.create(user_id: @user.id, theme_id: @theme.id)
+    redirect "/themes/#{params[:id]}"
   end
   
   run! if app_file == $0

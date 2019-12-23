@@ -1,5 +1,5 @@
 feature "Create a new theme" do
-  scenario "A user can create a new theme" do
+  scenario "a user can create a new theme" do
     sign_up
     create_theme
     expect(page).to have_current_path "/themes"

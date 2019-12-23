@@ -1,5 +1,5 @@
 feature "View a theme" do
-  scenario "A user can view a theme for which he participates" do
+  scenario "a user can view a theme for which he participates" do
     sign_up
     create_theme
     click_button "Budapest Holiday August 2019"

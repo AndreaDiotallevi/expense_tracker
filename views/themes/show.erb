@@ -1,1 +1,13 @@
-<%= @theme.title %>
+<h1><%= @theme.title %></h1>
+
+<form action="/themes/<%= @theme.id %>/participations/new" method="get">
+  <input type="submit" value="Invite a Friend">
+</form>
+
+<h2><%= @theme.users.length %> Participants:</h2>
+
+<% @theme.users.each do |user| %>
+  <ul>
+    <li><%= user.first_name + " " + user.surname  %></li>
+  </ul>
+<% end %>

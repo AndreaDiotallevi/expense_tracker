@@ -23,3 +23,14 @@ def create_theme
   fill_in "title", with: "Budapest Holiday August 2019"
   click_button "Create Theme"
 end
+
+def sign_up_user_2
+  visit "/"
+  click_button "Sign Up"
+  fill_in "first-name", with: "Derrick"
+  fill_in "surname", with: "Jones"
+  fill_in "email", with: "derrick@gmail.com"
+  fill_in "password", with: "password"
+  fill_in "confirm-password", with: "password"
+  click_button "Sign Up"
+end
