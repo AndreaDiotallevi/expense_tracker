@@ -26,7 +26,7 @@ class ExpenseTracker < Sinatra::Base
     if params[:"password"] == params[:"confirm-password"]
       encrypted_password = BCrypt::Password.create(params[:"password"])
       user = User.create(first_name: params[:"first-name"], surname: params[:"surname"],
-                        email: params[:"email"], password: encrypted_password)
+                         email: params[:"email"], password: encrypted_password)
       session[:user_id] = user.id
       redirect "/themes"
     else
@@ -67,7 +67,6 @@ class ExpenseTracker < Sinatra::Base
   end
 
   get "/themes/:id" do
-    @user = User.find(session[:user_id])
     @theme = Theme.find(params[:id])
     erb :"themes/show"
   end
@@ -99,7 +98,8 @@ class ExpenseTracker < Sinatra::Base
   post "/themes/:id/expenses" do
     @user = User.find(session[:user_id])
     @theme = Theme.find(params[:id])
-    Expense.create(user_id: @user.id, theme_id: @theme.id, amount: params[:"amount"], description: params[:"description"])
+    Expense.create(user_id: @user.id, theme_id: @theme.id,
+                   amount: params[:"amount"], description: params[:"description"])
     redirect "/themes/#{params[:id]}"
   end
   

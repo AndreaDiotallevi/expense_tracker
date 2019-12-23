@@ -16,8 +16,17 @@
   <input type="submit" value="Add New Expense">
 </form>
 
-<% @theme.expenses.each do |expense| %>
-  <ul>
-    <li><%= @user.first_name + " " + @user.surname + " £" + expense.amount.to_s + " " + expense.description %></li>
-  </ul>
-<% end %>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Amount</th>
+    <th>Description</th>
+  </tr>
+  <% @theme.expenses.each do |expense| %>
+    <tr>
+      <td><%= expense.user.first_name %> <%= expense.user.surname %></td>
+      <td>£<%= expense.amount.to_s %></td>
+      <td><%= expense.description %></td>
+    </tr>
+  <% end %>
+<table>
