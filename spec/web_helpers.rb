@@ -9,10 +9,29 @@ def sign_up
   click_button "Sign Up"
 end
 
+def sign_up_user_2
+  visit "/"
+  click_button "Sign Up"
+  fill_in "first-name", with: "Derrick"
+  fill_in "surname", with: "Jones"
+  fill_in "email", with: "derrick@gmail.com"
+  fill_in "password", with: "password"
+  fill_in "confirm-password", with: "password"
+  click_button "Sign Up"
+end
+
 def log_in
   visit "/"
   click_button "Log In"
   fill_in "email", with: "test@gmail.com"
+  fill_in "password", with: "password"
+  click_button "Log In"
+end
+
+def log_in_user_2
+  visit "/"
+  click_button "Log In"
+  fill_in "email", with: "derrick@gmail.com"
   fill_in "password", with: "password"
   click_button "Log In"
 end
@@ -24,13 +43,23 @@ def create_theme
   click_button "Create Theme"
 end
 
-def sign_up_user_2
-  visit "/"
-  click_button "Sign Up"
+def invite_friend
+  click_button "Invite a Friend"
   fill_in "first-name", with: "Derrick"
   fill_in "surname", with: "Jones"
-  fill_in "email", with: "derrick@gmail.com"
-  fill_in "password", with: "password"
-  fill_in "confirm-password", with: "password"
-  click_button "Sign Up"
+  click_button "Invite Friend"
+end
+
+def add_expense
+  click_button "Add New Expense"
+  fill_in "amount", with: "200"
+  fill_in "description", with: "Restaurant"
+  click_button "Add This Expense"
+end
+
+def add_expense_2
+  click_button "Add New Expense"
+  fill_in "amount", with: "50"
+  fill_in "description", with: "Museum"
+  click_button "Add This Expense"
 end

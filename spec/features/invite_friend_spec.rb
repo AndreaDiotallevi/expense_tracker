@@ -4,12 +4,9 @@ feature "Invite a user to a theme" do
     sign_up
     create_theme
     click_button "Budapest Holiday August 2019"
-    click_button "Invite a Friend"
-    fill_in "first-name", with: "Derrick"
-    fill_in "surname", with: "Jones"
-    click_button "Invite Friend"
-    expect(page).to have_content "2 Participants:"
-    expect(page).to have_content "Andrea Diotallevi"
-    expect(page).to have_content "Derrick Jones"
+    invite_friend
+    log_in_user_2
+    expect(page).to have_current_path "/themes"
+    expect(page).to have_selector :link_or_button, "Budapest Holiday August 2019"
   end
 end

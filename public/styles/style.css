@@ -1,0 +1,12 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+input {
+  padding: 0;
+  border: none;
+  background: none;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+}

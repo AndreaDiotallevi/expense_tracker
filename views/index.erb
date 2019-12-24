@@ -1,11 +1,26 @@
-<h1>Welcome to the expense tracker app</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2><%= flash[:notice] %></h2>
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="styles/reset.css" rel="stylesheet" type="text/css">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<form action="/users/new" method="get">
-  <input type="submit" value="Sign Up">
-</form>
+<body>
+  <h1>Welcome to the expense tracker app</h1>
 
-<form action="/sessions/new" method="get">
-  <input type="submit" value="Log In">
-</form>
+  <h2><%= flash[:notice] %></h2>
+
+  <form action="/users/new" method="get">
+    <input type="submit" value="Sign Up">
+  </form>
+
+  <form action="/sessions/new" method="get">
+    <input type="submit" value="Log In">
+  </form>
+</body>
+
+</html>

@@ -68,6 +68,8 @@ class ExpenseTracker < Sinatra::Base
 
   get "/themes/:id" do
     @theme = Theme.find(params[:id])
+    sum_amount = @theme.expenses.sum(:amount)
+    @average_amount = sum_amount / @theme.participations.length
     erb :"themes/show"
   end
 

@@ -4,17 +4,27 @@
   <input type="submit" value="Invite a Friend">
 </form>
 
-<h2><%= @theme.users.length %> Participants:</h2>
-
-<% @theme.users.each do |user| %>
-  <ul>
-    <li><%= user.first_name + " " + user.surname  %></li>
-  </ul>
-<% end %>
-
 <form action="/themes/<%= @theme.id %>/expenses/new" method="get">
   <input type="submit" value="Add New Expense">
 </form>
+
+<table>
+  <caption>Theme Overall Stats</caption>
+  <tr>
+    <th>User</th>
+    <th>Total Paid</th>
+    <th>Average Per User</th>
+    <th>Debit / Credit</th>
+  </tr>
+  <% @theme.participations.each do |participation| %>
+    <tr>
+      <td><%= participation.user.first_name %> <%= participation.user.surname %></td>
+      <td><%= participation.user.expenses.where(theme_id: @theme.id).sum(:amount) %></td>
+      <td><%= @average_amount.round(2) %></td>
+      <td><%= (participation.user.expenses.where(theme_id: @theme.id).sum(:amount) - @average_amount).round(2) %></td>
+    </tr>
+  <% end %>
+</table>
 
 <table>
   <tr>
@@ -25,7 +35,7 @@
   <% @theme.expenses.each do |expense| %>
     <tr>
       <td><%= expense.user.first_name %> <%= expense.user.surname %></td>
-      <td>£<%= expense.amount.to_s %></td>
+      <td><%= expense.amount.to_s %></td>
       <td><%= expense.description %></td>
     </tr>
   <% end %>
