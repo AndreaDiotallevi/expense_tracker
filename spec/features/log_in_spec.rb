@@ -1,13 +1,13 @@
 feature "Log In" do
   scenario "a user can log in" do
-    join
+    sign_up
     log_in
     expect(page).to have_current_path "/themes"
     expect(page).to have_content "Signed in as Andrea"
   end
 
   scenario "a user cannot log in if he enters an incorrect email" do
-    join
+    sign_up
     visit "/"
     click_button "Log in"
     fill_in "email", with: "wrong-email@gmail.com"

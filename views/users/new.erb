@@ -1,20 +1,54 @@
-<h2><%= flash[:notice] %></h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="/users" method="post">
-  <label for="first-name">First Name</label>
-  <input type="text" name="first-name">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker Join Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-  <label for="surname">Surname</label>
-  <input type="text" name="surname">
+<body>
+  <nav>
+    <form action="/users/new" method="get">
+      <input type="submit" value="Join" id="nav-sign-up">
+    </form>
 
-  <label for="email">Email Address</label>
-  <input type="email" name="email">
+    <form action="/sessions/new" method="get">
+      <input type="submit" value="Log in" id="nav-log-in">
+    </form>
+  </nav>
 
-  <label for="password">Password</label>
-  <input type="password" name="password">
+  <header>
+    <h2>Join the Expense Tracker</h2>
+    <h3><%= flash[:notice] %></h3>
+  </header>
 
-  <label for="confirm-password">Confirm Password</label>
-  <input type="password" name="confirm-password">
+  <section id="join-form-container">
+    <form action="/users" method="post" id="join-form">
+      <div class="join-form-input">
+        <input type="text" name="first-name" placeholder="First name">
+      </div>
 
-  <input type="submit" value="Join">
-</form>
+      <div class="join-form-input">
+        <input type="text" name="surname" placeholder="Surname">
+      </div>
+
+      <div class="join-form-input">
+        <input type="email" name="email" placeholder="Email address">
+      </div>
+
+      <div class="join-form-input">
+        <input type="password" name="password" placeholder="Password">
+      </div>
+
+      <div class="join-form-input">
+        <input type="password" name="confirm-password" placeholder="Confirm password">
+      </div>
+
+      <div class="join-form-input submit-btn">
+        <input type="submit" value="Sign up">
+      </div>
+    </form>
+  </section>
+</body>

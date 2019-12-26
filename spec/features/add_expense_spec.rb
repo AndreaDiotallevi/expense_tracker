@@ -1,6 +1,6 @@
 feature "Add an expense" do
   scenario "a user can add an expense to a theme for which he participates" do
-    join
+    sign_up
     create_theme
     click_button "Budapest Holiday August 2019"
     add_expense

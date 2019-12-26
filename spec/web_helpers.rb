@@ -1,4 +1,4 @@
-def join
+def sign_up
   visit "/"
   click_button "Join"
   fill_in "first-name", with: "Andrea"
@@ -6,10 +6,10 @@ def join
   fill_in "email", with: "test@gmail.com"
   fill_in "password", with: "password"
   fill_in "confirm-password", with: "password"
-  click_button "Join"
+  click_button "Sign up"
 end
 
-def join_user_2
+def sign_up_user_2
   visit "/"
   click_button "Join"
   fill_in "first-name", with: "Derrick"
@@ -17,7 +17,7 @@ def join_user_2
   fill_in "email", with: "derrick@gmail.com"
   fill_in "password", with: "password"
   fill_in "confirm-password", with: "password"
-  click_button "Join"
+  click_button "Sign up"
 end
 
 def log_in

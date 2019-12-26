@@ -1,5 +1,4 @@
 * {
-  /* font-family: 'Work Sans', sans-serif; */
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -14,15 +13,17 @@ nav, header {
 header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 input {
   color: rgb(26, 46, 59);
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   background: none;
   font-weight: 300;
 }
-#nav-join {
+#nav-sign-up {
   font-weight: 500;
   border: solid rgb(26, 46, 59, 0.25) 1px;
   border-radius: 3px;
@@ -32,5 +33,31 @@ h1 {
   padding: 15px;
   letter-spacing: -1px;
   font-size: 75px;
+  font-weight: 500;
+}
+h2 {
+  color: rgb(26, 46, 59);
+  padding: 15px;
+  font-size: 30px;
+  font-weight: 500;
+}
+#join-form-container {
+  display: flex;
+  justify-content: center;
+}
+#join-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.join-form-input input {
+  border: solid rgb(26, 46, 59, 0.25) 1px;
+  border-radius: 3px;
+  margin: 5px;
+}
+.submit-btn input {
+  background-color: rgb(26, 46, 59);
+  color: white;
   font-weight: 500;
 }

@@ -250,28 +250,6 @@
         null,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/join_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/log_in_spec.rb": [
         1,
         1,
@@ -299,6 +277,28 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/sign_up_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -336,6 +336,6 @@
         null
       ]
     },
-    "timestamp": 1577355198
+    "timestamp": 1577358373
   }
 }
