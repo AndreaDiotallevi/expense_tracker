@@ -1,11 +1,31 @@
-<h3><%= flash[:notice] %></h3>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="/sessions" method="post">
-  <label for="email">Email Address</label>
-  <input type="email" name="email">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense tracker sign up</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <h2>Log in to the Expense Tracker</h2>
+    <h3><%= flash[:notice] %></h3>
+  </header>
 
-  <label for="password">Password</label>
-  <input type="password" name="password">
+  <section id="sign-in-form-container">
+    <form action="/sessions" method="post" id="sign-in-form">
+      <div class="sign-in-form-input">
+        <input type="email" name="email" placeholder="Email address">
+      </div>
 
-  <input type="submit" value="Log in">
-  </form>
+      <div class="sign-in-form-input">
+        <input type="password" name="password" placeholder="Password">
+      </div>
+
+      <div class="sign-in-form-input submit-btn">
+        <input type="submit" value="Log in">
+      </div>
+    </form>
+  </section>
+</body>

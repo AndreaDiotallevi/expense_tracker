@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>New Expense</title>
-  <link rel="stylesheet" href="../public/styles/styles.css">
+  <title>Expense tracker new expense</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <form action="/themes/<%= @theme.id %>/expenses" method="post">
-    <label for="amount">Amount</label>
-    <input type="number" name="amount">
+  <section>
+      <form action="/themes/<%= @theme.id %>/expenses" method="post">
+        <label for="amount">Amount</label>
+        <input type="number" name="amount">
 
-    <label for="description">Description</label>
-    <input type="text" name="description">
+        <label for="description">Description</label>
+        <input type="text" name="description">
 
-    <input type="submit" value="Add This Expense">
-  </form>
+        <input type="submit" value="Add This Expense">
+    </form>
+  </section>
 </body>
+
 </html>
 
