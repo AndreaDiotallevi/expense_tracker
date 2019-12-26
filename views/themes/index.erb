@@ -1,21 +1,43 @@
-<nav>
-  <p>Signed in as <%= @user.first_name %></p>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="/sessions/destroy" method="post">
-  <input type="submit" value="Log out">
-</form>
+<head>
+  <meta charset="UTF-8">
+  <title>Expense tracker homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<form action="/themes/new" method="get">
-  <input type="submit" value="Create a New Theme">
-</form>
-
-<ul>
-  <% @themes.each do |theme| %>
-    <li>
-      <form action="/themes/<%= theme.id %>" method="get">
-        <input type="submit" value="<%= theme.title %>">
+<body>
+  <nav>
+    <div class="nav-left">
+      <form action="/themes/new" method="get">
+        <input type="submit" value="Create a theme" id="create-theme-btn">
       </form>
-    </li>
-  <% end %>
-</ul>
+    </div>
+
+    <div class="nav-right">
+      <form action="/sessions/destroy" method="post">
+        <input type="submit" value="Log out" id="nav-log-out-btn">
+      </form>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Your Expense Tracker</h1>
+    <h3><%= flash[:notice] %></h3>
+  </header>
+
+  <section>
+    <ul id="themes-container">
+      <% @themes.each do |theme| %>
+      <li class="theme">
+        <form action="/themes/<%= theme.id %>" method="get">
+          <input type="submit" value="<%= theme.title %>">
+        </form>
+      </li>
+      <% end %>
+    </ul>
+  </section>
+
+</body>

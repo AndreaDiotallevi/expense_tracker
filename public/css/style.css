@@ -2,62 +2,89 @@
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  /*border: solid 0.5px red;*/
-  font-size: 16px;
+  border: solid 0.5px red;
+  font-size: 15px;
   font-weight: 300;
 }
-nav, header {
+body {
+  background-color: rgb(240, 244, 247);
+}
+nav {
   display: flex;
+  justify-content: space-between;
   margin: 15px;
+}
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
 }
 header {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-input {
+h1, h2, h3, h4, p, input {
   color: rgb(26, 46, 59);
-  padding: 10px 10px;
-  border: none;
-  background: none;
-  font-weight: 300;
-}
-#nav-sign-up {
-  font-weight: 500;
-  border: solid rgb(26, 46, 59, 0.25) 1px;
-  border-radius: 3px;
 }
 h1 {
-  color: rgb(26, 46, 59);
   padding: 15px;
   letter-spacing: -1px;
   font-size: 75px;
   font-weight: 500;
 }
 h2 {
-  color: rgb(26, 46, 59);
   padding: 15px;
   font-size: 30px;
   font-weight: 500;
 }
-#join-form-container, #sign-in-form-container {
+#sign-up-form-container, #sign-in-form-container {
   display: flex;
   justify-content: center;
 }
-#join-form, #sign-in-form {
+#sign-up-form, #sign-in-form {
+  flex-direction: column;
+}
+.sign-up-input, .sign-in-input {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  width: 200px;
 }
-.join-form-input input, .sign-in-form-input input {
+.sign-up-input input, .sign-in-input input {
   border: solid rgb(26, 46, 59, 0.25) 1px;
   border-radius: 3px;
-  margin: 5px;
+  margin: 5px 0;
+  padding: 10px;
+  background: none;
 }
-.submit-btn input {
+.btn input {
   background-color: rgb(26, 46, 59);
   color: white;
   font-weight: 500;
+}
+#nav-sign-up-btn, #create-theme-btn {
+  background-color: rgb(26, 46, 59);
+  color: white;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+#nav-log-in-btn, #nav-log-out-btn {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+}
+#themes-container {
+  margin: 15px 200px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.theme {
+  flex-basis: 30%;
+  list-style-type: none;
 }

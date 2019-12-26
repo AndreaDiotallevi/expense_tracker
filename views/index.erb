@@ -10,13 +10,17 @@
 
 <body>
   <nav>
-    <form action="/users/new" method="get">
-      <input type="submit" value="Join" id="nav-join">
-    </form>
+    <div class="nav-left">
+      <form action="/users/new" method="get">
+        <input type="submit" value="Join" class="nav-btn" id="nav-sign-up-btn">
+      </form>
+    </div>
 
-    <form action="/sessions/new" method="get">
-      <input type="submit" value="Log in" id="nav-log-in">
-    </form>
+    <div class="nav-right">
+      <form action="/sessions/new" method="get">
+        <input type="submit" value="Log in" class="nav-btn" id="nav-log-in-btn">
+      </form>
+    </div>
   </nav>
 
   <header>

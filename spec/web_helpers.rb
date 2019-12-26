@@ -37,10 +37,10 @@ def log_in_user_2
 end
 
 def create_theme
-  click_button "Create a New Theme"
+  click_button "Create a theme"
   expect(page).to have_current_path "/themes/new"
   fill_in "title", with: "Budapest Holiday August 2019"
-  click_button "Create Theme"
+  click_button "Create theme"
 end
 
 def invite_friend

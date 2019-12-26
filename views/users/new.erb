@@ -9,44 +9,34 @@
 </head>
 
 <body>
-  <nav>
-    <form action="/users/new" method="get">
-      <input type="submit" value="Join" id="nav-sign-up">
-    </form>
-
-    <form action="/sessions/new" method="get">
-      <input type="submit" value="Log in" id="nav-log-in">
-    </form>
-  </nav>
-
   <header>
     <h2>Join the Expense Tracker</h2>
     <h3><%= flash[:notice] %></h3>
   </header>
 
-  <section id="join-form-container">
-    <form action="/users" method="post" id="join-form">
-      <div class="join-form-input">
+  <section id="sign-up-form-container">
+    <form action="/users" method="post" id="sign-up-form">
+      <div class="sign-up-input">
         <input type="text" name="first-name" placeholder="First name">
       </div>
 
-      <div class="join-form-input">
+      <div class="sign-up-input">
         <input type="text" name="surname" placeholder="Surname">
       </div>
 
-      <div class="join-form-input">
+      <div class="sign-up-input">
         <input type="email" name="email" placeholder="Email address">
       </div>
 
-      <div class="join-form-input">
+      <div class="sign-up-input">
         <input type="password" name="password" placeholder="Password">
       </div>
 
-      <div class="join-form-input">
+      <div class="sign-up-input">
         <input type="password" name="confirm-password" placeholder="Confirm password">
       </div>
 
-      <div class="join-form-input submit-btn">
+      <div class="sign-up-input btn">
         <input type="submit" value="Sign up">
       </div>
     </form>
