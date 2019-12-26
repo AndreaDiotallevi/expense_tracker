@@ -1,6 +1,6 @@
 feature "Log out" do
   scenario "a user can log out" do
-    sign_up
+    join
     click_button "Log Out"
 
     expect(page).to have_current_path "/"

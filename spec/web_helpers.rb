@@ -1,39 +1,39 @@
-def sign_up
+def join
   visit "/"
-  click_button "Sign Up"
+  click_button "Join"
   fill_in "first-name", with: "Andrea"
   fill_in "surname", with: "Diotallevi"
   fill_in "email", with: "test@gmail.com"
   fill_in "password", with: "password"
   fill_in "confirm-password", with: "password"
-  click_button "Sign Up"
+  click_button "Join"
 end
 
-def sign_up_user_2
+def join_user_2
   visit "/"
-  click_button "Sign Up"
+  click_button "Join"
   fill_in "first-name", with: "Derrick"
   fill_in "surname", with: "Jones"
   fill_in "email", with: "derrick@gmail.com"
   fill_in "password", with: "password"
   fill_in "confirm-password", with: "password"
-  click_button "Sign Up"
+  click_button "Join"
 end
 
 def log_in
   visit "/"
-  click_button "Log In"
+  click_button "Log in"
   fill_in "email", with: "test@gmail.com"
   fill_in "password", with: "password"
-  click_button "Log In"
+  click_button "Log in"
 end
 
 def log_in_user_2
   visit "/"
-  click_button "Log In"
+  click_button "Log in"
   fill_in "email", with: "derrick@gmail.com"
   fill_in "password", with: "password"
-  click_button "Log In"
+  click_button "Log in"
 end
 
 def create_theme
