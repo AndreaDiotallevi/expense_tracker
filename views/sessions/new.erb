@@ -10,7 +10,6 @@
 <body>
   <header>
     <h2>Log in to the Expense Tracker</h2>
-    <h3><%= flash[:notice] %></h3>
   </header>
 
   <section id="sign-in-form-container">
@@ -27,5 +26,9 @@
         <input type="submit" value="Log in">
       </div>
     </form>
+
+    <div>
+      <h3><%= flash[:notice] %></h3>
+    </div>
   </section>
 </body>

@@ -1,42 +1,53 @@
-<h1><%= @theme.title %></h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="/themes/<%= @theme.id %>/participations/new" method="get">
-  <input type="submit" value="Invite a Friend">
-</form>
+<head>
+  <meta charset="UTF-8">
+  <title>Expense tracker homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<form action="/themes/<%= @theme.id %>/expenses/new" method="get">
-  <input type="submit" value="Add New Expense">
-</form>
+<body>
+  <header>
+    <h2><%= @theme.title %></h2>
+  </header>
 
-<table>
-  <caption>Theme Overall Stats</caption>
-  <tr>
-    <th>User</th>
-    <th>Total Paid</th>
-    <th>Average Per User</th>
-    <th>Debit / Credit</th>
-  </tr>
-  <% @theme.participations.each do |participation| %>
-    <tr>
-      <td><%= participation.user.first_name %> <%= participation.user.surname %></td>
-      <td><%= participation.user.expenses.where(theme_id: @theme.id).sum(:amount) %></td>
-      <td><%= @average_amount.round(2) %></td>
-      <td><%= (participation.user.expenses.where(theme_id: @theme.id).sum(:amount) - @average_amount).round(2) %></td>
-    </tr>
-  <% end %>
-</table>
+  <section>
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Total Payments</th>
+        <th>Credit</th>
+        <th>Debit</th>
+      </tr>
+      <% @theme.participations.each do |participation| %>
+        <tr>
+          <td><%= participation.user.first_name %> <%= participation.user.surname %></td>
+          <td><%= sprintf("%.2f", participation.user.expenses.where(theme_id: @theme.id).sum(:amount)) %></td>
+          <td class="credit">
+            <% if participation.user.expenses.where(theme_id: @theme.id).sum(:amount) - @average_amount > 0 %>
+              <%= sprintf("%.2f", participation.user.expenses.where(theme_id: @theme.id).sum(:amount) - @average_amount) %>
+            <% end %>
+          </td>
+          <td class="debit">
+            <% if participation.user.expenses.where(theme_id: @theme.id).sum(:amount) - @average_amount < 0 %>
+              <%= sprintf("%.2f", participation.user.expenses.where(theme_id: @theme.id).sum(:amount) - @average_amount) %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </section>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Amount</th>
-    <th>Description</th>
-  </tr>
-  <% @theme.expenses.each do |expense| %>
-    <tr>
-      <td><%= expense.user.first_name %> <%= expense.user.surname %></td>
-      <td><%= expense.amount.to_s %></td>
-      <td><%= expense.description %></td>
-    </tr>
-  <% end %>
-<table>
+  <section id="buttons-container">
+    <form action="/themes/<%= @theme.id %>/participations/new" method="get">
+      <input type="submit" value="Invite a Friend" id="invite-friend-btn">
+    </form>
+
+    <form action="/themes/<%= @theme.id %>/expenses" method="get">
+      <input type="submit" value="View Expenses" id="view-expenses-btn">
+    </form>
+  </section>
+</body>
+</html>

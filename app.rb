@@ -102,6 +102,11 @@ class ExpenseTracker < Sinatra::Base
                    amount: params[:amount], description: params[:description])
     redirect "/themes/#{params[:id]}"
   end
+
+  get "/themes/:id/expenses" do
+    @theme = Theme.find(params[:id])
+    erb :"expenses/show"
+  end
   
   run! if app_file == $0
 end

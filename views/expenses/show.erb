@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Expense tracker homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <h2>Expenses for <%= @theme.title %></h2>
+  </header>
+
+  <section>
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Amount</th>
+        <th>Description</th>
+      </tr>
+      <% @theme.expenses.each do |expense| %>
+        <tr>
+          <td><%= expense.user.first_name %> <%= expense.user.surname %></td>
+          <td><%= expense.amount.to_s %></td>
+          <td><%= expense.description %></td>
+        </tr>
+      <% end %>
+    <table>
+  </section>
+
+  <section id="buttons-container">
+    <form action="/themes/<%= @theme.id %>/expenses/new" method="get">
+      <input type="submit" value="Add New Expense" id="add-expense-btn">
+    </form>
+  </section>
+</body>
+</html>
