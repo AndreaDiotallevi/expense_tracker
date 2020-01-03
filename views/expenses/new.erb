@@ -3,19 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Expense tracker new expense</title>
+  <title>New expense</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <section>
-      <form action="/themes/<%= @theme.id %>/expenses" method="post">
-        <input type="number" name="amount" placeholder="Amount">
-
-        <input type="text" name="description" placeholder="Description">
-
-        <input type="submit" value="Add This Expense">
+    <form action="/themes/<%= @theme.id %>/expenses" method="post">
+      <input type="number" name="amount" placeholder="Amount">
+      <input type="text" name="description" placeholder="Description">
+      <input type="submit" value="Add This Expense">
     </form>
   </section>
 </body>
