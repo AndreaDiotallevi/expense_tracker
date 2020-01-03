@@ -45,21 +45,20 @@ end
 
 def invite_friend
   click_button "Invite a Friend"
-  fill_in "first-name", with: "Derrick"
-  fill_in "surname", with: "Jones"
+  fill_in "email", with: "derrick@gmail.com"
   click_button "Invite Friend"
 end
 
 def add_expense
   click_button "Add New Expense"
-  fill_in "amount", with: "200"
+  fill_in "amount", with: "200.00"
   fill_in "description", with: "Restaurant"
   click_button "Add This Expense"
 end
 
 def add_expense_2
   click_button "Add New Expense"
-  fill_in "amount", with: "50"
+  fill_in "amount", with: "50.00"
   fill_in "description", with: "Museum"
   click_button "Add This Expense"
 end

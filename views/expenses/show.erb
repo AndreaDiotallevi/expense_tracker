@@ -23,7 +23,7 @@
       <% @theme.expenses.each do |expense| %>
         <tr>
           <td><%= expense.user.first_name %> <%= expense.user.surname %></td>
-          <td><%= expense.amount.to_s %></td>
+          <td><%= sprintf("%.2f", expense.amount.to_s) %></td>
           <td><%= expense.description %></td>
         </tr>
       <% end %>

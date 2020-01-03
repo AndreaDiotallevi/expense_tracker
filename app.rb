@@ -85,7 +85,7 @@ class ExpenseTracker < Sinatra::Base
   end
 
   post "/themes/:id/participations" do
-    @user = User.where(first_name: params[:"first-name"], surname: params[:surname]).first
+    @user = User.where(email: params[:email]).first
     @theme = Theme.find(params[:id])
     Participation.create(user_id: @user.id, theme_id: @theme.id)
     redirect "/themes/#{params[:id]}"
@@ -98,8 +98,10 @@ class ExpenseTracker < Sinatra::Base
 
   post "/themes/:id/expenses" do
     @theme = Theme.find(params[:id])
-    Expense.create(user_id: session[:user_id], theme_id: @theme.id,
-                   amount: params[:amount], description: params[:description])
+    Expense.create(user_id: session[:user_id],
+                   theme_id: @theme.id,
+                   amount: params[:amount],
+                   description: params[:description])
     redirect "/themes/#{params[:id]}"
   end
 

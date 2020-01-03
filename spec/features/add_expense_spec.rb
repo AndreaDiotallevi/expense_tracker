@@ -5,6 +5,7 @@ feature "Add an expense" do
     click_button "Budapest Holiday August 2019"
     click_button "View Expenses"
     add_expense
+    click_button "View Expenses"
     expect(page).to have_content "Andrea"
     expect(page).to have_content "Diotallevi"
     expect(page).to have_content "200.00"
