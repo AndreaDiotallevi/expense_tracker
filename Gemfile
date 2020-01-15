@@ -1,9 +1,12 @@
 source "https://rubygems.org"
 
+ruby '2.6.3'
+
 gem "activerecord"
 gem "bcrypt"
 gem "capybara"
 gem "pg"
+gem 'puma'
 gem "rake"
 gem "rspec"
 gem "rubocop", "0.71.0"

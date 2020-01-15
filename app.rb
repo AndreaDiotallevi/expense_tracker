@@ -98,10 +98,8 @@ class ExpenseTracker < Sinatra::Base
 
   post "/themes/:id/expenses" do
     @theme = Theme.find(params[:id])
-    Expense.create(user_id: session[:user_id],
-                   theme_id: @theme.id,
-                   amount: params[:amount],
-                   description: params[:description])
+    Expense.create(user_id: session[:user_id], theme_id: @theme.id,
+                   amount: params[:amount], description: params[:description])
     redirect "/themes/#{params[:id]}"
   end
 
