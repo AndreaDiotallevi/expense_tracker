@@ -9,7 +9,7 @@ gem "pg"
 gem 'puma'
 gem "rake"
 gem "rspec"
-gem "rubocop", "0.71.0"
+gem 'rubocop', '~> 0.71.0', require: false
 gem "simplecov", require: false
 gem "simplecov-console", require: false
 gem "sinatra"

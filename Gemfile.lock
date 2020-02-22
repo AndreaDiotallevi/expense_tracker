@@ -155,7 +155,7 @@ DEPENDENCIES
   puma
   rake
   rspec
-  rubocop (= 0.71.0)
+  rubocop (~> 0.71.0)
   simplecov
   simplecov-console
   sinatra
