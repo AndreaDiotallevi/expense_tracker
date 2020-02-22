@@ -8,14 +8,3 @@ before_script:
 - bundle exec rake db:migrate
 script:
 - bundle exec rspec
-deploy:
-  provider: heroku
-  app: expense-tracker-ruby
-  on:
-    repo: AndreaDiotallevi/expense-tracker
-  run:
-  - bundle exec rails db:create
-  - bundle exec rails db:migrate
-  api_key:
-    secure: e32ce2eb-da4d-4b49-9341-fc5344194794
-    
