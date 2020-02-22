@@ -6,7 +6,7 @@ A full-stack web application in Ruby & Sinatra where you can manage shared expen
 
 ## Live Demo
 
-The application is deployed to Heroku at this link: [https://expense-tracker-sinatra.herokuapp.com](https://expense-tracker-sinatra.herokuapp.com/)
+The application is deployed to Heroku at this link: [https://expense-tracker-ruby.herokuapp.com](https://expense-tracker-ruby.herokuapp.com/)
 
 ## Prerequisites
 
