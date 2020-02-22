@@ -54,3 +54,61 @@ To run the linter type ```rubocop```
 | surname    |        | theme_id       | theme_id    |
 | email      |        |                | amount      |
 | password   |        |                | description |
+
+## Live Features
+
+* Go to the Expense Tracker homepage [https://expense-tracker-sinatra.herokuapp.com](https://expense-tracker-sinatra.herokuapp.com/):
+
+![Homapage](./images/1-homepage.png)
+
+* Click 'Join' to be redirected to the sign up page:
+
+![Sign up](./images/2-users-new.png)
+
+* Enter your details and click 'Sign up' to be redirected to the themes page:
+
+![Sign up](./images/3-users-new-complete.png)
+
+* This is the themes page when you can view all the themes you are member of:
+
+![Themes](./images/4-themes.png)
+
+* Click 'Create a theme' to create a new theme:
+
+![Themes](./images/5-themes-new.png)
+
+* Enter the name of the theme and click 'Create theme':
+
+![Themes](./images/6-themes-new-complete.png)
+
+* Now you can view the new theme you have just created:
+
+![Themes](./images/7-themes.png)
+
+* Click on the theme to be redirected to the theme page:
+
+![Themes](./images/8-themes-id.png)
+
+* Click on 'View Expenses' to view all the expenses that have been recorded for this specific theme:
+
+![Themes](./images/9-themes-expenses.png)
+
+* Click on 'Add New Expense' to add a new expense. In this example we have added three expenses:
+
+![Themes](./images/10-themes-expenses-complete.png)
+
+* Click on 'Invite a Friend' to invite a friend to participate to this theme.
+
+![Themes](./images/11-themes-2-users.png)
+
+* Click on 'Invite a Friend' to invite another friend to participate to this theme.
+
+![Themes](./images/12-themes-3-users.png)
+
+* Now, each both users can log in on their accounts and register their expenses:
+
+![Themes](./images/13-multiple-expenses.png)
+
+* And on the main theme page, you can view the credit and debit balances for each member of a theme:
+
+![Themes](./images/14-credit-and-debit.png)
