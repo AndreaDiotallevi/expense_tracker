@@ -93,7 +93,7 @@ h3 {
 #themes-container {
   margin: 15px 100px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -107,8 +107,6 @@ h3 {
   border-radius: 3px;
   margin: 20px;
   cursor:pointer;
-  width: 400px;
-  height: 220px;
   background-color: white;
   border: none;
 }
@@ -152,4 +150,14 @@ tr .credit {
 tr .debit {
   color: red;
   font-weight: 500;
+}
+
+li form input {
+  font-size: 35px;
+  letter-spacing: 10px;
+}
+
+li form input:hover {
+  font-weight: bold;
+  transition: 0.2s;
 }
