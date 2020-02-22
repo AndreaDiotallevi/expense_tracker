@@ -27,6 +27,7 @@ The application is deployed to Heroku at this link: [https://expense-tracker-sin
 - Main technologies:
   - [Ruby](https://www.ruby-lang.org/en/): open source programming language with a focus on simplicity and productivity.
   - [Sinatra](http://sinatrarb.com/): a free and open source software web application library and domain-specific language written in Ruby.
+  - [Active Record](https://guides.rubyonrails.org/active_record_basics.html): the M in MVC - the model - which is the layer of the system responsible for representing business data and logic.
   - [BCrypt](https://rubygems.org/gems/bcrypt/versions/3.1.12): a sophisticated and secure hash algorithm designed by The OpenBSD project for hashing passwords.
   - [PG](https://rubygems.org/gems/pg/versions/0.18.4): Ruby interface to the {PostgreSQL RDBMS}.
   - [Rake](https://rubygems.org/gems/rake/versions/11.2.2): tt allows you to use ruby code to define "tasks" that can be run in the command line.
@@ -43,3 +44,13 @@ To run all the test type ```rspec```
 ## How to Run the Linter
 
 To run the linter type ```rubocop```
+
+## Relational Database Associations
+
+| Users      | Themes | Participations | Expenses    |
+| ---------- | ------ | -------------- | ----------- |
+| id         | id     | id             | id          |
+| first_name | title  | user_id        | user_id     |
+| surname    |        | theme_id       | theme_id    |
+| email      |        |                | amount      |
+| password   |        |                | description |
