@@ -8,3 +8,14 @@ before_script:
 - bundle exec rake db:migrate
 script:
 - bundle exec rspec
+deploy:
+  provider: heroku
+  app: expense-tracker-sinatra
+  on:
+    repo: AndreaDiotallevi/expense-tracker
+  run:
+  - bundle exec rails db:create
+  - bundle exec rails db:migrate
+  api_key:
+    secure: ZPoZ40kXmQUZ4AhNP+7IKN47Xj2859DdImyRu/eZUMlHJAJcdzF0NbcjaDkZDrjGsuqeBBL7QUEL67CVJWFCg/oC7HzqlMJMPOicMlApMoLHiTXf6slRU03twabHtQpmXSUnrQwUDe8+pRVcHO5ct67nnISiK7eO43EpZF+em7YL8YMAb1VakUiUJDTUUhupEJxVqQov3ivfVebHEThPEVjWNQ2fxXo/b/x1L3iYKjR6tmMfcdyvSRuSEtjeNeE0DsnIiHMNic0DMnnLYzEDA76Q0LIRhmOJklfW1fdZFJwanmLuYtRT0UI+FvjC9B2O5o+A2/uq1dnMZQpElSTzMiOS3Pn7mbgUQ4QlFWOMGUQ/ejjF82crrjMN9WHb2WQsYtVdr/yX+Q8bVDkppTywoP8ZHXldKJl99b4NlTyu6RUh4MzYR9jIlDp8WQvspjFlcqHbrX/Llw0z5vU6pFa6n9JJPzlK4f2+0Gb1EfbY6zI/iMSH84b3deJBjERh+L7FtVKAleR9T3pde/UD4L1DvL/L7NVz1oxUrXoN8gXKyf0SK8pPrTJdH74xPrGebWzqPJsU/OtIccPHqAzxTgV61Mqzej20q8K0GLZ+j/I0f9I4/jwbEI4OYCiQ8kkmyiha3wYBbgTwjhsSWLaTF8ddYb5x/pIlaHU1Q+ZG7J1H5cg=
+    

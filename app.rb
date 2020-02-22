@@ -15,7 +15,7 @@ class ExpenseTracker < Sinatra::Base
   enable :sessions
 
   get "/" do
-    erb :index
+    erb :"index"
   end
 
   get "/users/new" do
@@ -26,7 +26,7 @@ class ExpenseTracker < Sinatra::Base
     if params[:password] == params[:"confirm-password"]
       encrypted_password = BCrypt::Password.create(params[:password])
       user = User.create(first_name: params[:"first-name"], surname: params[:surname],
-                         email: params[:email], password: encrypted_password)
+                         email: params[:"email"], password: encrypted_password)
       session[:user_id] = user.id
       redirect "/themes"
     else
