@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/app.rb": [
+      "/Users/student/Code/expense-tracker/app.rb": [
         1,
         1,
         1,
@@ -104,8 +104,6 @@
         3,
         3,
         null,
-        null,
-        null,
         3,
         null,
         null,
@@ -117,7 +115,7 @@
         1,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/lib/user.rb": [
+      "/Users/student/Code/expense-tracker/lib/user.rb": [
         1,
         1,
         1,
@@ -125,26 +123,26 @@
         1,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/lib/theme.rb": [
+      "/Users/student/Code/expense-tracker/lib/theme.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/lib/participation.rb": [
+      "/Users/student/Code/expense-tracker/lib/participation.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/lib/expense.rb": [
+      "/Users/student/Code/expense-tracker/lib/expense.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/web_helpers.rb": [
+      "/Users/student/Code/expense-tracker/spec/web_helpers.rb": [
         1,
         9,
         9,
@@ -210,7 +208,7 @@
         1,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/add_expense_spec.rb": [
+      "/Users/student/Code/expense-tracker/spec/features/add_expense_spec.rb": [
         1,
         1,
         1,
@@ -226,7 +224,7 @@
         null,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/create_theme_spec.rb": [
+      "/Users/student/Code/expense-tracker/spec/features/create_theme_spec.rb": [
         1,
         1,
         1,
@@ -236,7 +234,7 @@
         null,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/homepage_spec.rb": [
+      "/Users/student/Code/expense-tracker/spec/features/homepage_spec.rb": [
         1,
         1,
         1,
@@ -244,59 +242,7 @@
         null,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/invite_friend_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/log_in_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/log_out_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/sign_up_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
+      "/Users/student/Code/expense-tracker/spec/features/invite_friend_spec.rb": [
         1,
         1,
         1,
@@ -310,7 +256,14 @@
         null,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/view_expenses_spec.rb": [
+      "/Users/student/Code/expense-tracker/spec/features/log_in_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -319,6 +272,28 @@
         1,
         1,
         1,
+        1,
+        null,
+        null
+      ],
+      "/Users/student/Code/expense-tracker/spec/features/log_out_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/student/Code/expense-tracker/spec/features/sign_up_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -333,7 +308,30 @@
         null,
         null
       ],
-      "/Users/andreadiotallevi/Code/AndreaDiotallevi/expense_tracker/spec/features/view_theme_spec.rb": [
+      "/Users/student/Code/expense-tracker/spec/features/view_expenses_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/student/Code/expense-tracker/spec/features/view_theme_spec.rb": [
         1,
         1,
         1,
@@ -344,6 +342,6 @@
         null
       ]
     },
-    "timestamp": 1578057400
+    "timestamp": 1582390394
   }
 }
