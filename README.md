@@ -8,6 +8,14 @@ A full-stack web application in Ruby & Sinatra where you can manage shared expen
 
 The application is deployed to Heroku at this link: [https://expense-tracker-sinatra.herokuapp.com](https://expense-tracker-sinatra.herokuapp.com/)
 
+## Challenges and Goals
+
+* Build a full-stack web application to help people keep track of group holiday expenses and each member credit and debit.
+* Build a MVC application following conventional design patterns.
+* Design relational database associations and RESTful routes.
+* Write SQL-like queries through an Object-Relational Mapping system like Active Record within a MVC application.
+* Build a fully-tested application with 100% test coverage.
+
 ## Prerequisites
 
 * Clone this repository with ```git clone git@github.com:AndreaDiotallevi/expense-tracker.git```
@@ -41,7 +49,7 @@ The application is deployed to Heroku at this link: [https://expense-tracker-sin
 
 To run all the test type ```rspec```
 
-## How to Run the Linter
+## Code Quality
 
 To run the linter type ```rubocop```
 
