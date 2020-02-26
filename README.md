@@ -126,8 +126,6 @@ To run the linter type ```rubocop```
 
 ## Continuous Integration
 
-## Continuous Integration
-
 [TravisCI](https://travis-ci.com/) has been use for continuous integration and automatic deployment to [Heroku](https://dashboard.heroku.com).
 
 ## Relational Database Associations
@@ -139,5 +137,3 @@ To run the linter type ```rubocop```
 | surname    |        | theme_id       | theme_id    |
 | email      |        |                | amount      |
 | password   |        |                | description |
-
-
