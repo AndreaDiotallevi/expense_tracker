@@ -2,7 +2,7 @@
 
 ## Description
 
-A full-stack web application in Ruby & Sinatra where you can manage shared expenses and calculate credit and debit balances for each member of a theme.
+A full-stack web application in Ruby on Sinatra where you can manage shared expenses and calculate credit and debit balances for each member of a theme.
 
 ## Live Demo
 
