@@ -6,7 +6,7 @@ gem "activerecord"
 gem "bcrypt"
 gem "capybara"
 gem "pg"
-gem 'puma'
+gem "puma", ">= 4.3.3"
 gem "rake"
 gem "rspec"
 gem 'rubocop', '~> 0.71.0', require: false
