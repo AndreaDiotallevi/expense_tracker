@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AndreaDiotallevi/expense-tracker.svg?branch=master)](https://travis-ci.org/AndreaDiotallevi/expense-tracker) [![Test Coverage](https://api.codeclimate.com/v1/badges/9797804d6b9a1b0e3c15/test_coverage)](https://codeclimate.com/github/AndreaDiotallevi/expense-tracker/test_coverage)</p>
+
 # Expense Tracker
 
 [Description](#description) | [Live Demo](#live-demo) | [Challenges and Goals](#challenges-and-goals) | [Features](#features) | [Getting Started](#getting-started) | [Database Setup](#database-setup) | [How to Run the Tests](#how-to-run-the-tests) | [How to Run the App](#how-to-run-the-app) | [Technologies Used](#technologies-used) | [Code Quality](#code-quality) | [Continuous Integration](#continuous-integration) | [Relational Database Associations](#relational-database-associations)
